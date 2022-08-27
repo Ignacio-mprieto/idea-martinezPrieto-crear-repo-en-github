@@ -1,0 +1,156 @@
+/* @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "logo        logo     logo       logo"
+        "informacion contacto servicios   nosotros";
+    background-image: linear-gradient(to top, #797209, yellow);
+}
+
+/* Header */
+i {
+    font-size: 30px;
+    color: blueviolet;
+}
+
+p {
+    font-family: 'Bangers', cursive;
+    transform: translate(2rem, -28px);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.titulo {
+    color: rgb(193, 5, 193);
+    margin-top: 2rem;
+    margin-right: 650px;
+    font-family: 'Bangers', cursive;
+    font-size: 50px;
+}
+
+.div {
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+h1 {
+    transform: translate(21rem, -83px);
+}
+
+/* Quise darle un giro pero cuando lo hago se me forma un scrool en la pag
+y el numero telefonico que esta al lado de wp se va abajo de wp */
+.imagenLogo {
+    max-width: 225px;
+    margin-left: 3rem;
+}
+
+
+/* Menu */
+.nosotros {
+    grid-area: nosotros;
+    background-image: url(../imagen/choco.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+
+.servicios {
+    grid-area: servicios;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagen/brownie-casero-super-chocolatoso-1-500x500.jpg);
+    background-size: cover;
+}
+
+.contacto {
+    grid-area: contacto;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagen/lemon.jpg);
+    background-size: cover;
+}
+
+.informacion {
+    grid-area: informacion;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagen/maice.jpg);
+    background-size: cover;
+}
+
+.content {
+    background: rgba(255, 255, 2, 0.664);
+    opacity: 0;
+    transition: .5s;
+}
+
+.content a {
+    color: rgba(132, 0, 255, 0.537);
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bangers', cursive;
+    cursor: pointer;
+}
+
+.links:hover .content {
+    opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "logo logo"     
+            "informacion contacto"
+            "servicios   nosotros";
+    }
+body {
+    background-image: url(../imagen/Homer_Simpson.webp);
+    background-image: linear-gradient(to top, #797209, yellow);
+}
+
+.logo p {
+    font-family: 'Bangers', cursive;
+}
+
+.informacion {
+    background-image: none;
+}
+
+.contacto {
+    background-image: none;
+}
+
+.servicios {
+    background-image: none;
+}
+
+.nosotros {
+    background-image: none;
+}
+
+}

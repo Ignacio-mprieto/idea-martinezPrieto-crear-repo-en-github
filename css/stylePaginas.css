@@ -1,0 +1,254 @@
+/* @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap'); */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(4, 1fr);
+    grid-template-rows:  repeat(4, 1fr) 0,5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nav     header    header   header   header"
+        "nav     content   content  content  content"
+        "nav     content   content  content  content"
+        "nav     content   content  content  content"
+        "footer  footer    footer   footer   footer";
+}
+
+/* body */
+.body {
+    background-color: yellow;
+    background-image: url(../imagen/Homer_Simpson.webp);
+}
+
+/* header */
+.header {
+    grid-area: header;
+    background-color: purple;
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    border-top: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bajon {
+    color: gray;
+    font-family: 'Bangers', cursive;
+    font-size: 50px;
+}
+
+.logo {
+    width: 90px;
+    margin-top: 10px;
+}
+
+/* nav */
+.nav {
+    grid-area: nav;
+    background-color: yellow;
+    border-left: solid 2px black;
+    border-top: solid 2px black;
+    border-right: solid 2px black;
+    background-image: linear-gradient(to right, rgb(255, 196, 0), yellow );
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 60px;
+}
+
+.ul li {
+    padding: 40px 40px;
+}
+
+.menu__item {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menu__item a {
+    color: purple;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.menu__item:hover {
+    background-color: purple;
+    transition: .3s;
+}
+
+a, h1 {
+    font-family: 'Bangers', cursive;
+}
+
+.a_menu:hover {
+ color: yellow;
+ opacity: 1;
+}
+
+/* main */
+main {
+    grid-area: content;
+    align-items: center;
+}
+
+.tarjetitas-section {
+    display: flex;
+    padding: 60px;
+    gap: 20px;
+}
+
+.tarjetita-div {
+ border: solid 2px purple;
+ background-color: rgba(137, 43, 226, 0.753);
+ border-radius: 50px;
+ overflow: hidden;
+ flex-direction: column;
+}
+
+.tarjeta__imagen {
+    width: 100%;
+    max-width: 250px;
+}
+
+.divididos {
+    padding-inline: 20px;
+}
+
+.tarjeta__boton { 
+    padding-left: 10px;
+    margin-left: 30px;
+}
+
+
+
+/* index */
+.section__contenido {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.parrafo__1, .parrafo__2 {
+    background-color: rgba(255, 255, 0, 0.44);
+    border: 2px solid black;
+    border-radius: 20px;
+    max-width: 270px;
+    padding: 30px;
+    margin-top: 30px;
+    font-style: oblique;
+    font-size: larger;
+    margin-right: 100px;
+    margin-bottom: 40px;
+}
+
+/* footer */
+.footer {
+    grid-area: footer;
+    background-color: purple;
+    padding: 20px;
+    border-top: solid 2px black;
+}
+
+.hijoDeFuter {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+a, i {
+    color: yellow;
+    text-decoration: none; 
+}
+
+i:hover {
+    color: black;
+}
+
+p {
+    font-family: 'Bangers', cursive;
+}
+
+/* Lu, esto lo deje comentado porque no entiendo cual es el error, la pagina se me rompe */
+
+/* @media screen and (max-width: 768px) {
+    .body {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "nav content content"
+            "nav content content"
+            "footer footer footer";
+     }
+    } */
+
+@media screen and (max-width: 480px) {
+ .body {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "header"
+        "nav"
+        "content"
+        "footer";
+ }
+
+ .header {
+    border-left: solid 2px black;
+    display: flex;
+    justify-content: space-around;
+ }
+
+ .nav {
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    border-top: none;
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to bottom, rgb(255, 196, 0), yellow );
+ }
+
+ .titulo {
+    margin-top: 2rem;
+    margin-right: 6rem;
+
+ }
+
+ .content {
+    border-right: solid 2px black;
+    border-left: solid 2px black;
+ }
+
+ .section__contenido {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+ }
+
+ .footer{
+    display: flex;
+    flex-direction: column;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    border-left: solid 2px black;
+ }
+
+ .tarjetitas-section {
+    display: flex;
+    flex-direction: column;
+ }
+}
+
